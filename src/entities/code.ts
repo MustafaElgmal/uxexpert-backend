@@ -1,7 +1,7 @@
 import { Component } from "./component";
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, BaseEntity } from "typeorm";
 @Entity()
-export class Code {
+export class Code extends BaseEntity{
   @PrimaryGeneratedColumn()
   id: number;
   @Column()

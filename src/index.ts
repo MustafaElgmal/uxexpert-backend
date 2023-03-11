@@ -5,6 +5,8 @@ import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
 import searchRouter from './routes/search'
+import categoryRouter from './routes/category'
+import componentRouter from './routes/component'
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -16,6 +18,8 @@ app.use(json());
 app.use(urlencoded({ extended: false }));
 
 app.use('/search',searchRouter)
+app.use('/catgeory',categoryRouter)
+app.use('/component',componentRouter)
 app.get("*", (req, res) => {
   res.status(401).send({ error: "Api not found!" });
 });

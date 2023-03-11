@@ -1,9 +1,9 @@
 import { Code } from './code';
 import { Category } from './category';
-import { Entity, PrimaryGeneratedColumn, Column,ManyToOne,OneToMany } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column,ManyToOne,OneToMany, BaseEntity } from "typeorm"
 
 @Entity()
-export class Component{
+export class Component extends BaseEntity{
     @PrimaryGeneratedColumn()
     id:number
     @Column()
