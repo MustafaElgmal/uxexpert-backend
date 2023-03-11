@@ -17,9 +17,9 @@ app.use(helmet());
 app.use(json());
 app.use(urlencoded({ extended: false }));
 
-app.use('/search',searchRouter)
-app.use('/catgeory',categoryRouter)
-app.use('/component',componentRouter)
+app.use('/api/search',searchRouter)
+app.use('/api/catgeory',categoryRouter)
+app.use('/api/component',componentRouter)
 app.get("*", (req, res) => {
   res.status(401).send({ error: "Api not found!" });
 });
