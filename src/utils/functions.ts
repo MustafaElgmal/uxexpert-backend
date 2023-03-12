@@ -4,7 +4,7 @@ export const classifySentence = (sentence:string) => {
     classifier.addDocument("medical hospital doctor nurse patient", "medical");
     classifier.addDocument("pizza burger restaurant  food", "food");
     classifier.addDocument("buying selling offers  discount", "ecommerce");
-    classifier.addDocument("teacher student teaching learning", "elearning");
+    classifier.addDocument("teacher student teaching learning school", "elearning");
     // Train
     classifier.train();
     // Apply/Predict
