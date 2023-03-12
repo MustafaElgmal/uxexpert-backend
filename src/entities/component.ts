@@ -10,6 +10,8 @@ export class Component extends BaseEntity{
     name:string
     @Column()
     imgUrl:string
+    @Column({default:false})
+    IsTrending:boolean
     @ManyToOne(()=>Category,(category)=>category.components)
     category:Category
     @OneToMany(()=>Code,(code)=>code.component)

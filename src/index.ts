@@ -18,7 +18,7 @@ app.use(json());
 app.use(urlencoded({ extended: false }));
 
 app.use('/api/search',searchRouter)
-app.use('/api/catgeory',categoryRouter)
+app.use('/api/category',categoryRouter)
 app.use('/api/component',componentRouter)
 app.get("*", (req, res) => {
   res.status(401).send({ error: "Api not found!" });

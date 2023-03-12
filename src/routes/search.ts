@@ -3,7 +3,7 @@ import { searchValidation } from "./../utils/validations";
 import { Router } from "express";
 const router = Router();
 
-router.get("/classify", (req, res) => {
+router.post("/classify", (req, res) => {
   const { sentence } = req.body;
   const errors = searchValidation(sentence);
   if (errors.length > 0) {
